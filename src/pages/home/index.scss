@@ -1,0 +1,14 @@
+.home {
+    height: 100%;
+
+    .slide {
+        max-height: 300px;
+        height: auto;
+
+        .swiper {
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+    }
+}

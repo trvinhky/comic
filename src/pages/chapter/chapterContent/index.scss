@@ -1,0 +1,56 @@
+.chapter-content {
+    font-family: 'Ysabeau Infant', sans-serif;
+
+    &__title {
+        font-family: inherit;
+        font-size: 25px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 18px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }
+
+    &__btn {
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 6px 15px;
+        border: 1px solid #000;
+        background-color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &--active {
+            color: #fff;
+            background-color: #000;
+        }
+    }
+
+    &__images {
+        padding: 20px 40px;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

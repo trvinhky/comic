@@ -1,0 +1,29 @@
+.card-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    display: block;
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__title {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        right: 0;
+        padding: 0 10px;
+        background-color: rgba($color: #000, $alpha: 0.4);
+    }
+
+    &__text {
+        font-family: 'Ysabeau Infant', sans-serif;
+        color: #fff;
+        font-size: 20px;
+    }
+}

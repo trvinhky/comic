@@ -1,0 +1,66 @@
+@keyframes hot {
+    0% {
+        color: #e74c3c;
+        opacity: 0.9;
+    }
+
+    50% {
+        color: #c0392b;
+        opacity: 0.95;
+    }
+
+    100% {
+        color: #eb2f06;
+        opacity: 1;
+    }
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-top {
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card-top__icon {
+            font-size: 25px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 4px 10px 0 0;
+            animation: hot 1s ease infinite;
+        }
+    }
+
+    &-bottom {
+        font-family: 'Ysabeau Infant', sans-serif;
+        flex: 1;
+
+        &__title {
+            font-family: inherit;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    &-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+}

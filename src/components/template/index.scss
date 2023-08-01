@@ -1,0 +1,13 @@
+.template-space {
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .template-group {
+        padding: 20px;
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
