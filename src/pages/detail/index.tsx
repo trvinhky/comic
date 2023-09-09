@@ -75,33 +75,33 @@ const Detail = () => {
                             {comicDetail.is_adult && <span>18+</span>}
                         </div>
                         <div className="detail-top__info">
-                            <h3 className="detail-title">{comicDetail.title}</h3>
-                            {comicDetail.other_names.length > 0 &&
-                                <h5 className="detail-title detail-title--sub">"{comicDetail.other_names.join(' - ')}"</h5>
+                            <h3 className="detail-title">{comicDetail?.title}</h3>
+                            {comicDetail?.other_names?.length > 0 &&
+                                <h5 className="detail-title detail-title--sub">"{comicDetail?.other_names?.join(' - ')}"</h5>
                             }
                             <div className="detail-star">
-                                <Rate allowHalf disabled defaultValue={comicDetail.average} /> <span className='detail-star__count'>{comicDetail.rating_count.toLocaleString('vi')} lượt đánh giá</span>
+                                <Rate allowHalf disabled defaultValue={comicDetail?.average} /> <span className='detail-star__count'>{comicDetail?.rating_count?.toLocaleString('vi')} lượt đánh giá</span>
                             </div>
                             <div className="detail-group">
                                 <span className="detail-group__intro">
-                                    <i className="fa-solid fa-eye"></i>{comicDetail.total_views.toLocaleString('vi')} lượt xem
+                                    <i className="fa-solid fa-eye"></i>{comicDetail?.total_views?.toLocaleString('vi')} lượt xem
                                 </span>
                                 <span className="detail-group__intro">
-                                    <i className="fa-solid fa-heart"></i>{comicDetail.followers.toLocaleString('vi')} lượt thích
+                                    <i className="fa-solid fa-heart"></i>{comicDetail?.followers?.toLocaleString('vi')} lượt thích
                                 </span>
                                 <span className="detail-group__intro">
-                                    <i className="fa-solid fa-book-open"></i>{comicDetail.chapters.length.toLocaleString('vi')} chương
+                                    <i className="fa-solid fa-book-open"></i>{comicDetail?.chapters?.length.toLocaleString('vi')} chương
                                 </span>
                             </div>
                             <div className="detail-text">
-                                <span>Tác giả: </span>{comicDetail.authors.toLowerCase() === 'updating' ? 'Đang cập nhật' : comicDetail.authors}
+                                <span>Tác giả: </span>{comicDetail?.authors?.toLowerCase() === 'updating' ? 'Đang cập nhật' : comicDetail?.authors}
                             </div>
                             <div className="detail-text">
-                                <span>Tình trạng: </span>{comicDetail.status}
+                                <span>Tình trạng: </span>{comicDetail?.status}
                             </div>
                             <div className="detail-text">
                                 <span>Thể loại: </span>
-                                {comicDetail.genres.map((el, i) => (
+                                {comicDetail?.genres?.map((el, i) => (
                                     i === 0 ? <Link to="/" key={el.id}>{el.name}</Link>
                                         : (
                                             <React.Fragment key={el.id}> - <Link to="/">{el.name}</Link></React.Fragment>
@@ -126,7 +126,7 @@ const Detail = () => {
                                 ellipsis={{ rows: 5, expandable: true, symbol: 'Xem Thêm' }}
                                 className='detail-desc'
                             >
-                                <span className='detail-desc__title'>Mô tả: </span>{comicDetail.description}
+                                <span className='detail-desc__title'>Mô tả: </span>{comicDetail?.description}
                             </Paragraph>
                         </div>
                     </div>
